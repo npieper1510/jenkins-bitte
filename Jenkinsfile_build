@@ -1,0 +1,33 @@
+pipeline {
+        libraries {
+            lib("CDlib@4.6.0")
+        }
+        options {
+            overrideIndexTriggers(false)
+            timestamps()
+            durabilityHint 'PERFORMANCE_OPTIMIZED'
+            timeout(time: 30, unit: 'MINUTES')
+        }
+        
+        parameters {
+                choice(name: 'TARGET_ENVIRONMENT', choices: ['dev', 'test'], description: 'Umgebung auf der getestet werden soll')
+            }
+            
+        agent any
+   
+        environment {
+            HOME = "${env.WORKSPACE}"
+        }
+        stages {
+            stage('Clean Up') {
+                steps {
+                    container('maven') {
+                        sh "mvn clean"
+                    }
+                }
+            }
+
+
+        }
+    }
+
