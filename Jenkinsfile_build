@@ -1,7 +1,4 @@
 pipeline {
-        libraries {
-            lib("CDlib@4.6.0")
-        }
         options {
             overrideIndexTriggers(false)
             timestamps()
