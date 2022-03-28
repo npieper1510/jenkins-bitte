@@ -11,5 +11,10 @@ pipeline {
                                  }
                            }
         }
+         stage('Generate Cucumber Report') {
+                                steps {
+                                    perfReport 'target/jmeter/results/20220324-test.csv'
+                                }
+                            }
     }
 }
