@@ -14,11 +14,19 @@
                                  }
                            }
         }
-         stage('Generate Cucumber Report') {
-                                steps {
-                                    perfReport 'target/jmeter/reports/test555/index.html'
-                                }
-                            }
+                 stage('Publish JMeter Report') {
+                     steps {
+                         publishHTML target: [
+                             allowMissing: false,
+                             alwaysLinkToLastBuild: true,
+                             keepAll: false,
+                             reportDir: 'target/jmeter/reports/test555',
+                             reportFiles: 'index.html',
+                             reportName: 'JMeter Report',
+                             reportTitles: 'The Report File Titles'
+                         ]
+                     }
+                 }
                             
                          
     }
