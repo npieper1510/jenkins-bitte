@@ -18,6 +18,7 @@
                     <testFilesIncluded>
                         <testFilesIncluded>test.jmx</testFilesIncluded>
                     </testFilesIncluded>
+                    <appendResultsTimestamp>true</appendResultsTimestamp>
                 </configuration>
                 <executions>
                     <execution>
@@ -39,9 +40,6 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <appendResultsTimestamp>true</appendResultsTimestamp>
-                </configuration>
             </plugin>
         </plugins>
     </build>
