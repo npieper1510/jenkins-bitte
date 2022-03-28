@@ -39,6 +39,9 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <appendResultsTimestamp>true</appendResultsTimestamp>
+                </configuration>
             </plugin>
         </plugins>
     </build>
