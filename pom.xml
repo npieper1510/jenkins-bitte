@@ -23,7 +23,7 @@
                 <configuration>
                     <suppressJMeterOutput>false</suppressJMeterOutput>
                     <testFilesIncluded>
-                        <testFilesIncluded>test.jmx</testFilesIncluded>
+                        <testFilesIncluded>test555.jmx</testFilesIncluded>
                     </testFilesIncluded>
                     <appendResultsTimestamp>true</appendResultsTimestamp>
                    <!-- <resultsFileNameDateFormat>yyyy-MM-dd-HH:mm:ss</resultsFileNameDateFormat> -->
