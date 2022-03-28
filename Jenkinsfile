@@ -7,8 +7,9 @@
    
                                         
         stage("run test") {
-              bzt "src/test/jmeter/test.jmx"
-                                        }
+        sh "jmeter -Jjmeter.save.saveservice.output_format=xml
+                  -n -t src/test/jmeter/test.jmx"
+        }
          stage('Generate Cucumber Report') {
                                 steps {
                                     perfReport 'target/jmeter/results/test.csv'
