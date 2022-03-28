@@ -10,6 +10,8 @@
 
     <properties>
         <jmeter.timestamp>1990</jmeter.timestamp>
+        <test.users>30</test.users>
+        <test.tiff>true</test.tiff>
     </properties>
 
     <build>
@@ -26,7 +28,10 @@
                     <appendResultsTimestamp>true</appendResultsTimestamp>
                    <!-- <resultsFileNameDateFormat>yyyy-MM-dd-HH:mm:ss</resultsFileNameDateFormat> -->
                     <testResultsTimestamp>false</testResultsTimestamp>
-
+                    <propertiesUser>
+                        <users>${test.users}</users>
+                        <tiff>${test.tiff}</tiff>
+                    </propertiesUser>
 
                 </configuration>
                 <executions>
