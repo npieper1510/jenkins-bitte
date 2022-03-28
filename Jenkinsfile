@@ -1,4 +1,3 @@
-def call(cloudConfiguration="cmp-dev", jdkVersion="jdk11") {
 
     pipeline {
         agent { docker { image 'maven:3.8.4-openjdk-11-slim' } }
@@ -18,6 +17,7 @@ def call(cloudConfiguration="cmp-dev", jdkVersion="jdk11") {
                             
                          
     }
-}
+    }
+
 
 
