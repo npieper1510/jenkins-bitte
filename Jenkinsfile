@@ -10,13 +10,13 @@
             }
              post {
                  always {
-                      archiveArtifacts artifacts: '**/*.jtl', fingerprint: true
+                      archiveArtifacts artifacts: '**/*.csv', fingerprint: true
                                  }
                            }
         }
          stage('Generate Cucumber Report') {
                                 steps {
-                                    perfReport 'target/jmeter/results/test555.jtl'
+                                    perfReport 'target/jmeter/results/test555.csv'
                                 }
                             }
                             
