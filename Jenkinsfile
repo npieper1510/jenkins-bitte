@@ -5,6 +5,11 @@ pipeline {
             steps {
                 sh 'mvn verify'
             }
+             post {
+                 always {
+                      archiveArtifacts artifacts: '**/*.csv', fingerprint: true
+                                 }
+                           }
         }
     }
 }
