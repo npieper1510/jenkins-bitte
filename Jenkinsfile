@@ -7,7 +7,9 @@
    
                                         
         stage("run test") {
-        sh "jmeter -Jjmeter.save.saveservice.output_format=xml -n -t src/test/jmeter/test.jmx"
+        dir('jmeter') {
+            sh "jmeter -Jjmeter.save.saveservice.output_format=xml -n -t src/test/jmeter/test.jmx"
+        }
         }
          stage('Generate Cucumber Report') {
                                 steps {
