@@ -28,7 +28,7 @@
                     <appendResultsTimestamp>true</appendResultsTimestamp>
                    <!-- <resultsFileNameDateFormat>yyyy-MM-dd-HH:mm:ss</resultsFileNameDateFormat> -->
                     <testResultsTimestamp>false</testResultsTimestamp>
-               
+                    <generateReports>true</generateReports>
 
                     <propertiesUser>
                         
