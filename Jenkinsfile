@@ -6,7 +6,7 @@
     stages {
         stage('build') {
             steps {
-                sh 'mvn verify'
+                sh 'mvn -Dtest.users=50 -Dtest.tiff=true verify'
             }
              post {
                  always {
