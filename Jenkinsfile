@@ -4,20 +4,11 @@ def call(cloudConfiguration="cmp-dev", jdkVersion="jdk11") {
         agent { docker { image 'maven:3.8.4-openjdk-11-slim' } }
         
     stages {
-        /*stage('build') {
-            steps {
-                sh 'mvn verify'
-            }
-             post {
-                 always {
-                      archiveArtifacts artifacts: '**/*.csv', fingerprint: true
-                                 }
-                           }
-        }*/
+      
    
                                         
-                                        stage("run test") {
-                                            bzt "src/test/jmeter/test.jmx"
+        stage("run test") {
+              bzt "src/test/jmeter/test.jmx"
                                         }
          stage('Generate Cucumber Report') {
                                 steps {
