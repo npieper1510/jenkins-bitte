@@ -7,6 +7,11 @@
     <groupId>org.example</groupId>
     <artifactId>lup-test</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <jmeter.timestamp>1990</jmeter.timestamp>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -19,7 +24,9 @@
                         <testFilesIncluded>test.jmx</testFilesIncluded>
                     </testFilesIncluded>
                     <appendResultsTimestamp>true</appendResultsTimestamp>
-                    <resultsFileNameDateFormat>yyyy-MM-dd HH:mm:ss</resultsFileNameDateFormat>
+                   <!-- <resultsFileNameDateFormat>yyyy-MM-dd-HH:mm:ss</resultsFileNameDateFormat> -->
+                    <testResultsTimestamp>false</testResultsTimestamp>
+
 
                 </configuration>
                 <executions>
