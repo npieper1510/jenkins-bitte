@@ -16,7 +16,7 @@
         }
          stage('Generate Cucumber Report') {
                                 steps {
-                                    perfReport 'target/jmeter/results/test555.csv'
+                                    perfReport 'target/jmeter/reports/test555/index.html'
                                 }
                             }
                             
