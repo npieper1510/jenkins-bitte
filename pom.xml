@@ -19,6 +19,8 @@
                         <testFilesIncluded>test.jmx</testFilesIncluded>
                     </testFilesIncluded>
                     <appendResultsTimestamp>true</appendResultsTimestamp>
+                    <resultsFileNameDateFormat>yyyy-MM-dd HH:mm:ss</resultsFileNameDateFormat>
+
                 </configuration>
                 <executions>
                     <execution>
