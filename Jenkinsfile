@@ -25,7 +25,7 @@
                       steps {
           plot csvFileName: 'addresses.csv', 
                   csvSeries: [[
-                                      file: 'addresses.csv',
+                                      file: 'src/test/jmeter/addresses.csv',
                                       exclusionValues: '',
                                       displayTableFlag: false,
                                       inclusionFlag: 'OFF',
