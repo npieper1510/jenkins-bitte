@@ -24,7 +24,7 @@
         
         stage('Publish Dennis Result') {
                     steps {
-                       perfReport 'target/jmeter/results/dennis.csv'
+                       perfReport 'target/**/jmeter/bin/dennis.csv'
 
                     }
                 
