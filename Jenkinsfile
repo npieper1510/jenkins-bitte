@@ -21,22 +21,28 @@
                                          }
                                    }
         }
-         
-          stage('Publish JMeter Report') {
-             steps {
-                 publishHTML target: [
-                     allowMissing: false,
-                     alwaysLinkToLastBuild: true,
-                     keepAll: false,
-                     reportDir: 'src/test/jmeter',
-                     reportFiles: 'csv.html',
-                     reportName: 'JMeter Report',
-                     reportTitles: 'The Report File Titles'
-                 ]
-             }
-         }     
+         stage('hihi') {
+                      steps {
+          plot csvFileName: 'test.csv', 
+                  csvSeries: [[
+                                      file: 'test.csv',
+                                      exclusionValues: '',
+                                      displayTableFlag: false,
+                                      inclusionFlag: 'OFF',
+                                      url: '']],
+                  group: 'Plot Group',
+                  title: 'Plot Title',
+                  style: 'line',
+                  exclZero: false,
+                  keepRecords: false,
+                  logarithmic: false,
+                  numBuilds: '',
+                  useDescr: false,
+                  yaxis: '',
+                  yaxisMaximum: '',
+                  yaxisMinimum: ''    
            
-                            
+                     }}       
                          
     }
     }
