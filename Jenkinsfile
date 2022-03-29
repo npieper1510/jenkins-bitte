@@ -25,7 +25,7 @@
         
      stage('Publish Dennis Result') {
                  steps {
-                    unstash("ear")
+                    perfReport unstash("ear")
                  }
              
              }
