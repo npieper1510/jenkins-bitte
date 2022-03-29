@@ -3,6 +3,10 @@ import java.text.SimpleDateFormat;
 import java.nio.file.Files;
 import java.nio.file.StandardOpenOption;
 
+def simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+def simpleDttmFormat = new SimpleDateFormat("yyyy-MM-dd  HH:mm:ss");
+def actualNow = new Date();
+def now = simpleDttmFormat.format(actualNow);
 def group = simpleDateFormat.format(actualNow);
 
     pipeline {
