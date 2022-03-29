@@ -31,7 +31,7 @@
                                       inclusionFlag: 'OFF',
                                       url: '']],
                   group: 'Plot Group',
-                  title: 'Moin Bitte',
+                  title: 'Hallo Bitte',
                   style: 'line',
                   exclZero: false,
                   keepRecords: false,
