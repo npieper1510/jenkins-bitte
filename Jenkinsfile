@@ -13,13 +13,9 @@
             
         stage('build') {
             steps {
-                sh 'mvn -Dtest.users=50 -Dtest.tiff=true verify'
+                sh 'mvn verify'
             }
-             post {
-                 always {
-                      archiveArtifacts artifacts: '**/dennis.csv', fingerprint: true
-                                 }
-                           }
+            
         }
         
         stage('Publish Dennis Result') {
