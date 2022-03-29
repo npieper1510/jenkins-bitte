@@ -1,2 +1,2 @@
 PayloadId,RoutingLabel,Zielwelt,Freigabe Dauer(ms),Uebergabe Dauer (ms),LieferungsId
-someid,999,124,123,567,5555
+someid,"999","124","123","567","5555"
