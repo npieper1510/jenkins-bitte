@@ -28,7 +28,7 @@
                      allowMissing: false,
                      alwaysLinkToLastBuild: true,
                      keepAll: false,
-                     reportDir: 'target/jmeter',
+                     reportDir: 'src/test/jmeter',
                      reportFiles: 'csv.html',
                      reportName: 'JMeter Report',
                      reportTitles: 'The Report File Titles'
