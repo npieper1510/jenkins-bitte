@@ -31,7 +31,7 @@
                                       inclusionFlag: 'OFF',
                                       url: '']],
                   group: 'Plot Group',
-                  title: 'Plot Title',
+                  title: 'Funktionier Bitte',
                   style: 'line',
                   exclZero: false,
                   keepRecords: false,
