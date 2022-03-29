@@ -23,9 +23,9 @@
         }
          stage('hihi') {
                       steps {
-          plot csvFileName: 'test.csv', 
+          plot csvFileName: 'addresses.csv', 
                   csvSeries: [[
-                                      file: 'test.csv',
+                                      file: 'addresses.csv',
                                       exclusionValues: '',
                                       displayTableFlag: false,
                                       inclusionFlag: 'OFF',
