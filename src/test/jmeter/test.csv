@@ -1,2 +1,2 @@
 PayloadId (ms),RoutingLabel,Zielwelt,Freigabe Dauer(ms),Uebergabe Dauer (ms),LieferungsId
-someid,EZ,ALT,123,567,43fa591a-7e99-46b6-9479-b982dfe3caf4
+"someid","EZ","ALT",123,567,"43fa591a-7e99-46b6-9479-b982dfe3caf4"
