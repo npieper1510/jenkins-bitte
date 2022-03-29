@@ -15,17 +15,17 @@
             steps {
                 sh 'mvn verify'
             }
+                  post {
+                         always {
+                              archiveArtifacts artifacts: '**/dennis.csv', fingerprint: true
+                                         }
+                                   }
         }
-        
-        stage("Archive") {
-            steps {
-                stash(name: "ear", includes: '**/dennis.csv')
-            }
-        }
+              
         
      stage('Publish Dennis Result') {
                  steps {
-                    echo 'unstash("ear")'
+                    perfReport 'target/**/jmeter/bin/dennis.csv'
                  }
              
              }
