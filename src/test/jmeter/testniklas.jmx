@@ -171,7 +171,7 @@ payloadIdZielweltMap.put(&quot;someid&quot;, &quot;ALT&quot;);
 payloadIdRoutingLabelMap.put(&quot;someid&quot;, &quot;EZ&quot;);
 payloadIdUebergabedauerMap.put(&quot;someid&quot;, 567L);
 
- try (PrintWriter writer = new PrintWriter(&quot;test-niklas.csv&quot;)) {
+ try (PrintWriter writer = new PrintWriter(&quot;testniklas.csv&quot;)) {
             StringBuilder sb = new StringBuilder();
             //PayloadId, RoutingLabel, Zielwelt, Freigabe Dauer, Übergabe Dauer, LieferungsId
             String delimiter = &quot;;&quot;;
