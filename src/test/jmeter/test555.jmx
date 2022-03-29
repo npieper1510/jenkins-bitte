@@ -134,6 +134,70 @@
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread-Gruppe" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Schleifen-Controller (Loop Controller)" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Report" enabled="true">
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
+Map&lt;String, Long&gt; payloadIdFreigabeMap = Collections.synchronizedMap(new HashMap&lt;&gt;());
+Map&lt;String, String&gt; payloadIdZielweltMap = Collections.synchronizedMap(new HashMap&lt;&gt;());
+Map&lt;String, String&gt; payloadIdRoutingLabelMap = Collections.synchronizedMap(new HashMap&lt;&gt;());
+Map&lt;String, Long&gt; payloadIdUebergabedauerMap =  Collections.synchronizedMap(new HashMap&lt;&gt;());
+String lieferungsId = UUID.randomUUID().toString();
+
+
+payloadIdFreigabeMap.put(&quot;someid&quot;, 123L);
+payloadIdZielweltMap.put(&quot;someid&quot;, &quot;ALT&quot;);
+payloadIdRoutingLabelMap.put(&quot;someid&quot;, &quot;EZ&quot;);
+payloadIdUebergabedauerMap.put(&quot;someid&quot;, 567L);
+
+ try (PrintWriter writer = new PrintWriter(&quot;test-niklas.csv&quot;)) {
+            StringBuilder sb = new StringBuilder();
+            //PayloadId, RoutingLabel, Zielwelt, Freigabe Dauer, Übergabe Dauer, LieferungsId
+            String delimiter = &quot;;&quot;;
+            String lineBreak = &quot;\n&quot;;
+            sb.append(&quot;PayloadId&quot;).append(delimiter).append(&quot;RoutingLabel&quot;).append(delimiter)
+                    .append(&quot;Zielwelt&quot;).append(delimiter).append(&quot;Freigabe Dauer(ms)&quot;).append(delimiter).append(&quot;Übergabe Dauer (ms)&quot;)
+                    .append(delimiter)
+                    .append(&quot;LieferungsId&quot;).append(lineBreak);
+            payloadIdFreigabeMap.forEach((payloadId, freigabeTime) -&gt; {
+                sb.append(payloadId).append(delimiter).append(payloadIdRoutingLabelMap.get(payloadId)).append(delimiter)
+                        .append(payloadIdZielweltMap.get(payloadId))
+                        .append(delimiter).append(freigabeTime.toString()).append(delimiter)
+                        .append(payloadIdUebergabedauerMap.get(payloadId)).append(delimiter)
+                        .append(lieferungsId).append(lineBreak);
+            });
+
+
+            writer.write(sb.toString());
+            log.info(&quot;Done writing report&quot;);
+        } catch (FileNotFoundException e) {
+        log.error(&quot;FILE NOT FOUND&quot;);
+        }</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+      </hashTree>
     </hashTree>
   </hashTree>
 </jmeterTestPlan>
