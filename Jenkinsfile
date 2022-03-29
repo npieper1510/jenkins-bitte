@@ -25,7 +25,7 @@
         
      stage('Publish Dennis Result') {
                  steps {
-                    echo 'unstash("ear")''
+                    echo 'unstash("ear")'
                  }
              
              }
