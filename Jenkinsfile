@@ -32,7 +32,7 @@
                                       url: '']],
                   group: 'Plot Group',
                   title: 'Hallo Bitte',
-                  style: 'line',
+                  style: 'stackedArea',
                   exclZero: false,
                   keepRecords: false,
                   logarithmic: false,
