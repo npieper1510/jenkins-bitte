@@ -25,8 +25,8 @@
         
      stage('Publish Dennis Result') {
                  steps {
-                      unstash :	'ear'
-                      perfReport 'target/**/jmeter/bin/dennis.csv'
+                    unstash("ear")
+                    perfReport 'dennis.csv'
                  }
              
              }
