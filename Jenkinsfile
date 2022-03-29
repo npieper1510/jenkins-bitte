@@ -15,14 +15,20 @@
             steps {
                 sh 'mvn verify'
             }
-             post {
-                 always {
-                      archiveArtifacts artifacts: '**/*.csv', fingerprint: true
-                                 }
-                           }
         }
         
-     
+        stage("Archive") {
+            steps {
+                stash(name: "ear", includes: '**/dennis.csv')
+            }
+        }
+        
+     stage('Publish Dennis Result') {
+                 steps {
+                    unstash("ear")
+                 }
+             
+             }
         
            
                             
