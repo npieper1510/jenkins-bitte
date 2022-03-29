@@ -17,7 +17,7 @@
             }
              post {
                  always {
-                      archiveArtifacts artifacts: '**/*.csv', fingerprint: true
+                      archiveArtifacts artifacts: '**/dennis.csv', fingerprint: true
                                  }
                            }
         }
