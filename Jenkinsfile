@@ -1,4 +1,5 @@
 
+def group = simpleDateFormat.format(actualNow);
 
     pipeline {
         agent { docker { image 'maven:3.8.4-openjdk-11-slim' } }
@@ -23,24 +24,15 @@
         }
          stage('hihi') {
                       steps {
-          plot csvFileName: 'test.csv', 
-                  csvSeries: [[
-                                      file: 'src/test/jmeter/test.csv',
-                                      exclusionValues: '',
-                                      displayTableFlag: false,
-                                      inclusionFlag: 'OFF',
-                                      url: '']],
-                  group: 'Plot Group',
-                  title: 'Hallo Bitte',
-                  style: 'stackedArea',
-                  exclZero: false,
-                  keepRecords: false,
-                  logarithmic: false,
-                  numBuilds: '',
-                  useDescr: false,
-                  yaxis: '',
-                  yaxisMaximum: '',
-                  yaxisMinimum: ''    
+                      
+                      plot csvFileName: 'src/test/jmeter/test.csv', csvSeries: [[displayTableFlag: true, exclusionValues: 'downloads,uploads', file: 'src/test/jmeter/test.csv', inclusionFlag: 'OFF', url: '']], group: "${group}", style: 'line', title: "speedtest", yaxis: 'mbps', useDescr: true
+
+                      
+                      
+                      
+                      
+         
+            
            
                      }}       
                          
