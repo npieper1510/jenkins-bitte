@@ -15,7 +15,11 @@
             steps {
                 sh 'mvn verify'
             }
-            
+             post {
+                 always {
+                      archiveArtifacts artifacts: '**/dennis.csv', fingerprint: true
+                                 }
+                           }
         }
         
         stage('Publish Dennis Result') {
