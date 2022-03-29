@@ -25,7 +25,7 @@
         
      stage('Publish Dennis Result') {
                  steps {
-                    perfReport 'target/**/jmeter/bin/dennis.csv'
+                    perfReport 'var/jenkins_home/jobs/GlaubMir/branches/main/builds/**/temp/dennis.csv'
                  }
              
              }
