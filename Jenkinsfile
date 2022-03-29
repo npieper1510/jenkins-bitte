@@ -21,7 +21,16 @@
                                  }
                            }
         }
-                 stage('Publish JMeter Report') {
+        
+        stage('Publish Dennis Result') {
+                    steps {
+                       perfReport 'target/jmeter/results/dennis.csv'
+
+                    }
+                
+                }
+        
+                         stage('Publish JMeter Report') {
                      steps {
                          publishHTML target: [
                              allowMissing: false,
