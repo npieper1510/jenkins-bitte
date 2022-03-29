@@ -22,27 +22,9 @@
                            }
         }
         
-        stage('Publish Dennis Result') {
-                    steps {
-                       perfReport 'target/**/jmeter/bin/dennis.csv'
-
-                    }
-                
-                }
+     
         
-                         stage('Publish JMeter Report') {
-                     steps {
-                         publishHTML target: [
-                             allowMissing: false,
-                             alwaysLinkToLastBuild: true,
-                             keepAll: false,
-                             reportDir: 'target/jmeter/reports/testniklas',
-                             reportFiles: 'index.html',
-                             reportName: 'JMeter Report',
-                             reportTitles: 'The Report File Titles'
-                         ]
-                     }
-                 }
+           
                             
                          
     }
