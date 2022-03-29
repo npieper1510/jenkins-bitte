@@ -23,15 +23,15 @@
         }
          stage('hihi') {
                       steps {
-          plot csvFileName: 'addresses.csv', 
+          plot csvFileName: 'test.csv', 
                   csvSeries: [[
-                                      file: 'src/test/jmeter/addresses.csv',
+                                      file: 'src/test/jmeter/test.csv',
                                       exclusionValues: '',
                                       displayTableFlag: false,
                                       inclusionFlag: 'OFF',
                                       url: '']],
                   group: 'Plot Group',
-                  title: 'Funktionier Bitte',
+                  title: 'Moin Bitte',
                   style: 'line',
                   exclZero: false,
                   keepRecords: false,
