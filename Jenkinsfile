@@ -23,25 +23,7 @@
         }
          stage('hihi') {
                       steps {
-                      
-          plot csvFileName: 'test.csv', 
-                  csvSeries: [[
-                                      file: 'src/test/jmeter/test.csv',
-                                      exclusionValues: '',
-                                      displayTableFlag: true,
-                                      inclusionFlag: 'OFF',
-                                      url: '']],
-                  group: 'Plot Group 1',
-                  title: 'Dennis',
-                  style: 'line',
-                  exclZero: false,
-                  keepRecords: false,
-                  logarithmic: false,
-                  numBuilds: '5',
-                  useDescr: false,
-                  yaxis: '',
-                  yaxisMaximum: '',
-                  yaxisMinimum: ''    
+          perfReport 'target/jmeter/test.csv'
            
                      }}       
                          
