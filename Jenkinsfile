@@ -37,7 +37,7 @@
                   exclZero: false,
                   keepRecords: false,
                   logarithmic: false,
-                  numBuilds: '',
+                  numBuilds: '1',
                   useDescr: false,
                   yaxis: '',
                   yaxisMaximum: '',
