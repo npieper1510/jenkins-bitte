@@ -1,6 +1,8 @@
 "PayloadId","RoutingLabel","Zielwelt","Freigabe Dauer(ms)","Übergabe Dauer (ms)","LieferungsId"
 1fe30b9a-840c-4ce5-85ce-970e33304665,AV_NAECHSTER,ALT,62552,-1933,e6f88475-6d02-4024-a66a-47c6cf011426
+"PayloadId","RoutingLabel","Zielwelt","Freigabe Dauer(ms)","Übergabe Dauer (ms)","LieferungsId"
 20ab4f3b-7f48-4afa-8f4b-63b6dd935c7b,AV_REGULAER,ALT,61970,-1933,e6f88475-6d02-4024-a66a-47c6cf011426
+"PayloadId","RoutingLabel","Zielwelt","Freigabe Dauer(ms)","Übergabe Dauer (ms)","LieferungsId"
 ea891a7e-772a-4c93-86dd-62707386ddca,AV_REGULAER,ALT,61970,-1933,e6f88475-6d02-4024-a66a-47c6cf011426
 4ebd850e-fa79-4efd-89bc-39f488e0bed0,AV_REGULAER,ALT,62534,-1933,e6f88475-6d02-4024-a66a-47c6cf011426
 94670612-f57d-4d6f-9a5c-0eb40f9fe845,AV_REGULAER,NEU,62554,-3282,e6f88475-6d02-4024-a66a-47c6cf011426
