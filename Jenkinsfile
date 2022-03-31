@@ -23,7 +23,7 @@
         }
          stage('hihi') {
                       steps {
-          perfReport 'target/jmeter/test.csv'
+                         perfReport 'src/test/jmeter/test.csv'
            
                      }}       
                          
