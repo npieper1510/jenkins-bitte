@@ -29,7 +29,7 @@
                                       file: 'src/test/jmeter/test.csv',
                                       exclusionValues: '',
                                       displayTableFlag: true,
-                                      inclusionFlag: 'INCLUDE_BY_COLUMN',
+                                      inclusionFlag: 'OFF',
                                       url: '']],
                   group: 'Plot Group 1',
                   title: 'Dennis',
