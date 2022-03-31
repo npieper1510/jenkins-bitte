@@ -1,5 +1,5 @@
-"PayloadId","RoutingLabel","Zielwelt","Freigabe Dauer(ms)","Übergabe Dauer (ms)","LieferungsId"
-123, 456, 789 , 11 , 12, 13
-124, 456, 789 , 11 , 12, 13
-125, 456, 789 , 11 , 12, 13
-127, 456, 789 , 11 , 12, 13
+"PayloadId","RoutingLabel","Zielwelt","FreigabeDauer(ms)","ÜbergabeDauer(ms)","LieferungsId"
+123,456,789,11,12,13
+124,456,789,11,12,13
+125,456,789,11,12,13
+127,456,789,11,12,13
