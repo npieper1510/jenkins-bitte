@@ -21,13 +21,19 @@
                                          }
                                    }
         }
-         stage('hihi') {
-                      steps {
-                         perfReport 'src/test/jmeter/test.csv'
-           
-                     }}       
-                         
-    }
+        stage('Publish JMeter Report') {
+                             steps {
+                                 publishHTML target: [
+                                     allowMissing: false,
+                                     alwaysLinkToLastBuild: true,
+                                     keepAll: false,
+                                     reportDir: 'src/test/jmeter',
+                                     reportFiles: 'index.html',
+                                     reportName: 'JMeter Report',
+                                     reportTitles: 'The Report File Titles'
+                                 ]
+                             }
+                         }
     }
 
 
