@@ -17,7 +17,7 @@
             }
                   post {
                          always {
-                              archiveArtifacts artifacts: '**/test.csv', fingerprint: true
+                              archiveArtifacts artifacts: '**/testniklas.csv', fingerprint: true
                                          }
                                    }
         }
@@ -27,7 +27,7 @@
                                      allowMissing: false,
                                      alwaysLinkToLastBuild: true,
                                      keepAll: false,
-                                     reportDir: 'src/test/jmeter',
+                                     reportDir: 'target/jmeter/reports/testniklas',
                                      reportFiles: 'index.html',
                                      reportName: 'JMeter Report',
                                      reportTitles: 'The Report File Titles'
