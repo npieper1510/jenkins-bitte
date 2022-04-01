@@ -4,7 +4,7 @@
         agent { docker { image 'maven:3.8.4-openjdk-11-slim' } }
         
     parameters {
-              booleanParam(name: 'shouldDelete', defaultValue: false, description: 'Gibt an ob die Datenbank aufgeräumt werden soll')
+              booleanParam(name: 'SHOULD_DELETE', defaultValue: false, description: 'Gibt an ob die Datenbank aufgeräumt werden soll')
                 choice(name: 'TARGET_ENVIRONMENT', choices: ['dev', 'test'], description: 'Umgebung auf der getestet werden soll')
     }
     stages {
