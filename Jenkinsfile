@@ -3,6 +3,9 @@
     pipeline {
         agent { docker { image 'maven:3.8.4-openjdk-11-slim' } }
         
+    parameters {
+                choice(name: 'TARGET_ENVIRONMENT', choices: ['dev', 'test'], description: 'Umgebung auf der getestet werden soll')
+    }
     stages {
     stage('Remove target') {
                 steps {
