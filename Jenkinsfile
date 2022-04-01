@@ -17,7 +17,7 @@
             }
                   post {
                          always {
-                              archiveArtifacts artifacts: '**/test.csv', fingerprint: true
+                              archiveArtifacts artifacts: '**/load-test-report.csv', fingerprint: true
                                          }
                                    }
         }

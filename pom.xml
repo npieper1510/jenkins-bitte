@@ -13,7 +13,21 @@
         <test.users>30</test.users>
         <test.tiff>true</test.tiff>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>3.1.0</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.12.10</version>
+        </dependency>
+
+
+    </dependencies>
     <build>
         <plugins>
             <plugin>
@@ -21,17 +35,23 @@
                 <artifactId>jmeter-maven-plugin</artifactId>
                 <version>3.5.0</version>
                 <configuration>
+                    <excludedArtifacts>
+                        <!--                    remove older version of Mongo which come with jmeter-->
+                        <exclusion>org.mongodb:mongo-java-driver</exclusion>
+                    </excludedArtifacts>
+                    <jmeterExtensions>
+                        <artifact>org.mongodb:mongo-java-driver:3.12.10</artifact>
+                        <artifact>org.apache.kafka:kafka-clients:3.1.0</artifact>
+                    </jmeterExtensions>
                     <suppressJMeterOutput>false</suppressJMeterOutput>
                     <testFilesIncluded>
                         <testFilesIncluded>testniklas.jmx</testFilesIncluded>
                     </testFilesIncluded>
                     <appendResultsTimestamp>true</appendResultsTimestamp>
-                   <!-- <resultsFileNameDateFormat>yyyy-MM-dd-HH:mm:ss</resultsFileNameDateFormat> -->
                     <testResultsTimestamp>false</testResultsTimestamp>
-                    <generateReports>true</generateReports>
+                    <generateReports>false</generateReports>
 
                     <propertiesUser>
-                        
                     </propertiesUser>
 
                 </configuration>
